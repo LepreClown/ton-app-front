@@ -1,0 +1,59 @@
+.toggle {
+	@apply flex gap-10 h-[44px] w-full;
+
+	.btnContainer {
+		@apply relative flex w-[200px] justify-between bg-white bg-opacity-100 dark:bg-gray-700 transition-all shadow-lg rounded-lg z-1;
+		@media (max-width: 350px) {
+			@apply w-[100px];
+		}
+		div {
+			@apply flex items-center justify-between transition-all z-20 select-none cursor-pointer gap-x-3 pr-3 m-1 rounded-lg w-[80px];
+			@media (max-width: 350px) {
+				@apply w-[40px] pr-0 pl-2;
+			}
+			> button {
+				> svg {
+					@apply w-[20px] h-[20px];
+
+					> path {
+						@apply fill-gray-500 dark:fill-white;
+					}
+				}
+			}
+			> span {
+				@apply font-semibold text-gray-500 dark:text-white;
+				@media (max-width: 350px) {
+					@apply hidden;
+				}
+			}
+
+			&:first-child {
+				@apply pl-3;
+				> button {
+					> svg {
+						> path {
+							@apply fill-gray-950 dark:fill-gray-500;
+						}
+					}
+				}
+				> span {
+					@apply font-semibold text-gray-950 dark:text-gray-500;
+				}
+			}
+		}
+		.bgActive {
+			@apply absolute w-[95px] dark:w-[90px] h-[32px] bg-gray-200 dark:bg-gray-800 top-[6px] left-1.5 z-10 dark:mr-1.5 m-0;
+
+			@media (max-width: 350px) {
+				@apply w-[40px] dark:w-[40px] dark:ml-1.5;
+			}
+
+			&Dark {
+				transform: translateX(98px);
+				@media (max-width: 350px) {
+					transform: translateX(42px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.wrapper {
+	@apply flex flex-col w-full h-[700px] items-center justify-center gap-32;
+
+	> div:first-child {
+		@apply flex items-start justify-start w-full pt-4 pl-4;
+	}
+	.balance {
+		@apply text-center text-2xl justify-center font-bold;
+	}
+
+	.buttons {
+		@apply flex  justify-between w-1/2;
+		@media (max-width: 1780px) {
+			@apply w-2/3;
+		}
+		@media (max-width: 1650px) {
+			@apply w-1/2;
+		}
+		@media (max-width: 1350px) {
+			@apply w-2/3;
+		}
+		@media (max-width: 1070px) {
+			@apply w-full px-10;
+		}
+		> button {
+			@apply py-6 px-16;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.layout {
+	@apply relative px-96 h-screen;
+
+	@media (max-width: 1650px) {
+		@apply px-32;
+	}
+	@media (max-width: 1450px) {
+		@apply px-40;
+	}
+	@media (max-width: 1050px) {
+		@apply px-32;
+	}
+	@media (max-width: 800px) {
+		@apply px-16;
+	}
+
+	.header {
+		@apply flex items-center justify-between h-24;
+
+		> div:last-child {
+			button {
+				@apply bg-white dark:bg-gray-700 h-12 w-[170px];
+				> svg > path {
+					@apply fill-black dark:fill-white;
+				}
+				> div {
+					@apply text-gray-950 dark:text-white;
+				}
+			}
+			ul {
+				@apply bg-gray-900;
+			}
+		}
+	}
+	.network {
+		@apply bg-gray-700 rounded-2xl px-8 py-2 select-none;
+	}
+
+	.center {
+		@apply rounded-xl flex justify-center items-center my-layout bg-white dark:bg-gray-700 shadow;
+	}
+}

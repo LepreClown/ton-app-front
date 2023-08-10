@@ -1,0 +1,24 @@
+.form {
+	@apply flex-col items-center justify-center;
+
+	.btn {
+		@apply w-full py-3 px-8 bg-gray-200 shadow-gray-500 dark:bg-gray-700 dark:shadow-gray-950;
+	}
+
+	.quantity {
+		@apply relative flex;
+	}
+
+	.password {
+		@apply flex items-center relative;
+		.eye {
+			@apply absolute top-7 right-1 cursor-pointer text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors;
+			svg {
+				@apply text-xl select-none;
+			}
+		}
+	}
+	.max {
+		@apply absolute top-6 right-1 select-none cursor-pointer text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors font-semibold text-[14px];
+	}
+}
